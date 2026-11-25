@@ -8,7 +8,7 @@ A [make.fun](https://make.fun/bounty/u-steady-puffin-78-1922-one-star-written-in
 
 ## The line
 
-> One star. I was hired as the green background for his video calls, then blamed for 'looking tired' on camera — I haven't been watered since his promotion, only repositioned.
+> One star. Every Sunday you turn my pot a quarter turn so the room looks even, so I have spent four months growing a right angle back toward the window — and this Sunday you turned me again.
 
 ## Run
 
