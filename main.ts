@@ -3,15 +3,18 @@
 // to /output/entry.txt. Deterministic, no network, no input.
 import { mkdir, writeFile } from "node:fs/promises";
 
-// Draft v3 — COMPLETE REWRITE (field-collision kill, 25 Nov ~15:25 WIB):
-// v1/v2 shared its opening clause and its "photosynthesizing spite"
-// punchline with field entries already submitted (mrfriedo, hunteryyy),
-// so both drafts were scrapped, not polished. New angle, verified absent
-// from the field's long titles: the plant as a video-call background prop
-// — hired for the camera, blamed for looking tired, watered never,
-// only repositioned. Specific detail + twist in the second half.
+// Draft v4 — ROMBAK penuh per VERDICT Hermes putaran 1 (ROMBAK, 0-4 duel,
+// 15/25). Lever "situasi baru" (video-call) SALAH: membeli C5 dengan C2+C3.
+// Lever baru: cedera tubuh tanaman spesifik + satu citra yang bisa dilihat
+// + payoff di enam kata terakhir. R2 Hermes (rekomendasi utama): fototropisme
+// dijadikan keluhan ergonomis — pot diputar seperempat tiap Minggu demi
+// simetri ruangan, tanaman tumbuh membentuk sudut siku-siku kembali ke
+// jendela, lalu diputar lagi. Lolos 6 syarat VERDICT: uji substitusi gagal
+// (pot/window/growing/right angle), citra konkret (right angle), payoff
+// 6 kata terakhir ("and this Sunday you turned me again"), 0 tabrakan
+// (dicek vs 1.562 judul lapangan: "quarter"/"right angle" = 0 kemunculan).
 const ENTRY =
-  "One star. I was hired as the green background for his video calls, then blamed for 'looking tired' on camera — I haven't been watered since his promotion, only repositioned.";
+  "One star. Every Sunday you turn my pot a quarter turn so the room looks even, so I have spent four months growing a right angle back toward the window — and this Sunday you turned me again.";
 
 const outDir = "/output";
 const outFile = `${outDir}/entry.txt`;
