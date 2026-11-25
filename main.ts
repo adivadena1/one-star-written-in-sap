@@ -3,11 +3,15 @@
 // to /output/entry.txt. Deterministic, no network, no input.
 import { mkdir, writeFile } from "node:fs/promises";
 
-// Draft v2 (self-revision): tighter verb (hauls), punchline now plant-voiced
-// ("photosynthesizing pure spite") instead of the double punch
-// "grudge and a sunburn" — one image, one landing.
+// Draft v3 — COMPLETE REWRITE (field-collision kill, 25 Nov ~15:25 WIB):
+// v1/v2 shared its opening clause and its "photosynthesizing spite"
+// punchline with field entries already submitted (mrfriedo, hunteryyy),
+// so both drafts were scrapped, not polished. New angle, verified absent
+// from the field's long titles: the plant as a video-call background prop
+// — hired for the camera, blamed for looking tired, watered never,
+// only repositioned. Specific detail + twist in the second half.
 const ENTRY =
-  "One star. He waters me like he's apologising to a plant he already killed, then hauls me into full sun to 'cheer me up' — I am now a raisin, photosynthesizing pure spite.";
+  "One star. I was hired as the green background for his video calls, then blamed for 'looking tired' on camera — I haven't been watered since his promotion, only repositioned.";
 
 const outDir = "/output";
 const outFile = `${outDir}/entry.txt`;
