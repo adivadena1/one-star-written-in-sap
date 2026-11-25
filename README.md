@@ -8,7 +8,7 @@ A [make.fun](https://make.fun/bounty/u-steady-puffin-78-1922-one-star-written-in
 
 ## The line
 
-> One star. He waters me like he's apologising to a plant he already killed, then hauls me into full sun to 'cheer me up' — I am now a raisin, photosynthesizing pure spite.
+> One star. I was hired as the green background for his video calls, then blamed for 'looking tired' on camera — I haven't been watered since his promotion, only repositioned.
 
 ## Run
 
