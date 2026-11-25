@@ -1,35 +1,29 @@
-// One Star, Written in Sap — make.fun entry
-// Writes a single one-line 1-star review, in the voice of a houseplant,
-// to /output/entry.txt. Deterministic, no network, no input.
-import { mkdir, writeFile } from "node:fs/promises";
+// One Star, Written in Sap — entry generator (B "paint water").
+// Deterministic and offline: writes exactly one line to /output/entry.txt.
+// The gate is sealed: /output/entry.txt must be UTF-8, 1-279 characters,
+// a single line. This program refuses to write anything that breaks it.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-// Draft v4 — ROMBAK penuh per VERDICT Hermes putaran 1 (ROMBAK, 0-4 duel,
-// 15/25). Lever "situasi baru" (video-call) SALAH: membeli C5 dengan C2+C3.
-// Lever baru: cedera tubuh tanaman spesifik + satu citra yang bisa dilihat
-// + payoff di enam kata terakhir. R2 Hermes (rekomendasi utama): fototropisme
-// dijadikan keluhan ergonomis — pot diputar seperempat tiap Minggu demi
-// simetri ruangan, tanaman tumbuh membentuk sudut siku-siku kembali ke
-// jendela, lalu diputar lagi. Lolos 6 syarat VERDICT: uji substitusi gagal
-// (pot/window/growing/right angle), citra konkret (right angle), payoff
-// 6 kata terakhir ("and this Sunday you turned me again"), 0 tabrakan
-// (dicek vs 1.562 judul lapangan: "quarter"/"right angle" = 0 kemunculan).
-const ENTRY =
-  "One star. Every Sunday you turn my pot a quarter turn so the room looks even, so I have spent four months growing a right angle back toward the window — and this Sunday you turned me again.";
+const LINE =
+  "One star. She rinses her paintbrushes in my watering can, so my leaves are now the exact blue of her Year 3 self-portrait \u2014 I am now a school art project with roots.";
 
-const outDir = "/output";
-const outFile = `${outDir}/entry.txt`;
+const MIN_CHARS = 1;
+const MAX_CHARS = 279;
 
-// Gate (sealed scorer): UTF-8 text of 1 to 279 characters, not only
-// whitespace, single line.
-if (ENTRY.length < 1 || ENTRY.length > 279) {
-  throw new Error(`entry length ${ENTRY.length} outside gate 1-279`);
-}
-if (!ENTRY.trim()) {
-  throw new Error("entry is only whitespace");
-}
-if (ENTRY.includes("\n") || ENTRY.includes("\r")) {
-  throw new Error("entry must be a single line");
+function fail(message: string): never {
+  throw new Error(`entry gate violated: ${message}`);
 }
 
-await mkdir(outDir, { recursive: true });
-await writeFile(outFile, new TextEncoder().encode(ENTRY));
+// Gate checks, run BEFORE any write so a bad line can never land on disk.
+if ([...LINE].length < MIN_CHARS || [...LINE].length > MAX_CHARS) {
+  fail(`length ${[...LINE].length} chars is outside ${MIN_CHARS}-${MAX_CHARS}`);
+}
+if (LINE.includes("\n") || LINE.includes("\r")) {
+  fail("entry must be a single line");
+}
+if (LINE !== LINE.trim()) {
+  fail("entry must not start or end with whitespace");
+}
+
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", LINE, "utf8");

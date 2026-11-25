@@ -8,7 +8,7 @@ A [make.fun](https://make.fun/bounty/u-steady-puffin-78-1922-one-star-written-in
 
 ## The line
 
-> One star. Every Sunday you turn my pot a quarter turn so the room looks even, so I have spent four months growing a right angle back toward the window — and this Sunday you turned me again.
+> One star. She rinses her paintbrushes in my watering can, so my leaves are now the exact blue of her Year 3 self-portrait — I am now a school art project with roots.
 
 ## Run
 
